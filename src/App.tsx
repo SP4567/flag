@@ -105,7 +105,6 @@ const App: React.FC = () => {
                     data-index={index} // Add as an attribute for debugging or CSS
                     >
                   {component.hasWheel ? <div className="wheel"></div> : ''}
-                  <span>Index: {index}</span> {/* Display the index */}
                 </div>
             </Droppable>
 
