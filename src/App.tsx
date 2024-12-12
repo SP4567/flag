@@ -94,22 +94,19 @@ const App: React.FC = () => {
                   {...provided.droppableProps}
                   className="flag-container"
                 >
-                  {droppedComponents.map((component, index) => (
-                    <div
-                      key={component.id}
-                      style={{
+                 <div
+                     key={component.id}
+                     style={{
                         backgroundColor: component.color,
                         height: component.height,
-                        textAlign: 'center'
-                      }}
-                      className="dropped-item"
+                        textAlign: 'center',
+                    }}
+                    className="dropped-item"
+                    data-index={index} // Add as an attribute for debugging or CSS
                     >
-                      {component.hasWheel ? <div className="wheel"></div> : ''}
-                    </div>
-                  ))}
-                  {provided.placeholder}
+                  {component.hasWheel ? <div className="wheel"></div> : ''}
+                  <span>Index: {index}</span> {/* Display the index */}
                 </div>
-              )}
             </Droppable>
 
             <DragDropContext onDragEnd={onDragEnd}>
