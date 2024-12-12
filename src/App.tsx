@@ -94,7 +94,7 @@ const App: React.FC = () => {
                   {...provided.droppableProps}
                   className="flag-container"
                 >
-                  {droppedComponents.map((component, index) => (
+                  {droppedComponents.map((component) => (
                     <div
                       key={component.id}
                       style={{
